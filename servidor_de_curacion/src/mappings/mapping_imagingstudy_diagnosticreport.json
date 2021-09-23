@@ -1,0 +1,130 @@
+{
+    "fileSourceList": [
+      {
+        "extension": "",
+        "label": "",
+        "path": "",
+        "sheets": [
+          {
+            "value": "Hoja1",
+            "label": "Hoja1",
+            "headers": [
+              {
+                "type": "Text",
+                "value": "filename"
+              },
+              {
+                "type": "Text",
+                "value": "imagingStudyID",
+                "record": [
+                  {
+                    "recordId": "0",
+                    "target": [
+                      {
+                        "value": "DiagnosticReport.imagingStudy",
+                        "resource": "DiagnosticReport",
+                        "type": "Reference.ImagingStudy"
+                      }
+                    ]
+                  }
+                ],
+                "conceptMap": {}
+              },
+              {
+                "type": "Text",
+                "value": "reportID",
+                "record": [
+                  {
+                    "recordId": "0",
+                    "target": [
+                      {
+                        "value": "DiagnosticReport.id",
+                        "resource": "DiagnosticReport"
+                      }
+                    ]
+                  }
+                ],
+                "conceptMap": {}
+              },
+              {
+                "type": "Text",
+                "value": "status",
+                "record": [
+                  {
+                    "recordId": "0",
+                    "target": [
+                      {
+                        "value": "DiagnosticReport.status",
+                        "resource": "DiagnosticReport"
+                      }
+                    ]
+                  }
+                ],
+                "conceptMap": {}
+              },
+              {
+                "type": "Text",
+                "value": "code",
+                "record": [
+                  {
+                    "recordId": "0",
+                    "target": [
+                      {
+                        "value": "DiagnosticReport.code",
+                        "resource": "DiagnosticReport",
+                        "fixedUri": "http://hl7.org/fhir/sid/icd-10-en"
+                      }
+                    ]
+                  }
+                ],
+                "conceptMap": {
+                  "source": "http://hl7.org/fhir/sid/icd-10-en"
+                }
+              },
+              {
+                "type": "Text",
+                "value": "PatientId",
+                "record": [
+                  {
+                    "recordId": "0",
+                    "target": [
+                      {
+                        "value": "DiagnosticReport.subject",
+                        "resource": "DiagnosticReport",
+                        "type": "Reference.Patient"
+                      }
+                    ]
+                  },
+                  {
+                    "recordId": "1",
+                    "target": [
+                      {
+                        "value": "Patient.identifier",
+                        "resource": "Patient",
+                        "type": "Identifier.value"
+                      },
+                      {
+                        "value": "Patient.id",
+                        "resource": "Patient"
+                      }
+                    ]
+                  }
+                ],
+                "conceptMap": {}
+              }            
+            ]
+          },
+          {
+            "value": "Hoja2",
+            "label": "Hoja2"
+          },
+          {
+            "value": "Hoja3",
+            "label": "Hoja3"
+          }
+        ],
+        "currentSheet": null
+      }
+    ]
+  }
+  

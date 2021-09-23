@@ -1,0 +1,30 @@
+[ERROR] 2021-08-16 18:49:56,161 - OS error: [Errno 2] No such file or directory: '/secret/secret.key'
+[ERROR] 2021-08-16 18:49:56,162 - Secret key not found.
+[INFO] 2021-08-16 18:49:56,162 - Secret key not found. Creating new key...
+[ERROR] 2021-08-16 18:49:56,162 - OS error: [Errno 2] No such file or directory: '/secret/secret.key\\secret.key'
+[INFO] 2021-08-16 18:50:49,449 - Running configuration file: config.prod.ini
+[INFO] 2021-08-16 18:50:49,452 - Extract: True, Keep inbound: False, Watch folder: /health/inbound/
+[ERROR] 2021-08-16 18:50:49,610 - Unexpected exception at read_files(): [WinError 3] El sistema no puede encontrar la ruta especificada: '/health/inbound/'
+[ERROR] 2021-08-16 18:50:49,615 - None
+[ERROR] 2021-08-16 18:50:49,615 - Watcher stopped: [WinError 3] El sistema no puede encontrar la ruta especificada: '/health/inbound/'
+[INFO] 2021-08-16 18:52:31,091 - Running configuration file: config.prod.ini
+[INFO] 2021-08-16 18:52:31,093 - Extract: True, Keep inbound: False, Watch folder: C:/Users/joaco/Documents/alpacs-anonimizador/DICOM_filter/health/inbound/
+[WARNING] 2021-08-16 18:52:31,955 -  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+[INFO] 2021-08-16 18:52:31,956 -  * Running on http://192.168.3.20:5000/ (Press CTRL+C to quit)
+[INFO] 2021-08-16 18:53:13,539 - 127.0.0.1 - - [16/Aug/2021 18:53:13] "GET /checkid?value=201804543-8&create=true HTTP/1.1" 200 -
+[INFO] 2021-08-16 18:53:13,548 - 127.0.0.1 - - [16/Aug/2021 18:53:13] "GET /checkid?value=201804543-8&create=true HTTP/1.1" 200 -
+[INFO] 2021-08-16 18:53:13,549 - 127.0.0.1 - - [16/Aug/2021 18:53:13] "GET /checkid?value=201804543-8&create=true HTTP/1.1" 200 -
+[INFO] 2021-08-16 18:53:13,564 - 127.0.0.1 - - [16/Aug/2021 18:53:13] "GET /checkid?value=201804543-8&create=true HTTP/1.1" 200 -
+[INFO] 2021-08-16 18:53:13,590 - 127.0.0.1 - - [16/Aug/2021 18:53:13] "GET /checkid?value=201804543-8&create=true HTTP/1.1" 200 -
+[INFO] 2021-08-16 18:54:32,530 - 127.0.0.1 - - [16/Aug/2021 18:54:32] "GET /checkid?value=201804543-8&create=true HTTP/1.1" 200 -
+[INFO] 2021-08-16 18:54:32,531 - 127.0.0.1 - - [16/Aug/2021 18:54:32] "GET /checkid?value=201804543-8&create=true HTTP/1.1" 200 -
+[INFO] 2021-08-16 18:54:32,531 - 127.0.0.1 - - [16/Aug/2021 18:54:32] "GET /checkid?value=201804543-8&create=true HTTP/1.1" 200 -
+[INFO] 2021-08-16 18:54:32,539 - 127.0.0.1 - - [16/Aug/2021 18:54:32] "GET /checkid?value=201804543-8&create=true HTTP/1.1" 200 -
+[INFO] 2021-08-16 18:54:32,554 - 127.0.0.1 - - [16/Aug/2021 18:54:32] "GET /checkid?value=201804543-8&create=true HTTP/1.1" 200 -
+[INFO] 2021-08-16 18:55:19,470 - Watcher finished by user.
+[INFO] 2021-08-16 18:55:26,095 - Running configuration file: config.prod.ini
+[INFO] 2021-08-16 18:55:26,097 - Extract: True, Keep inbound: False, Watch folder: C:/Users/joaco/Documents/alpacs-anonimizador/DICOM_filter/health/inbound/
+[ERROR] 2021-08-16 18:55:26,108 - Unexpected exception at DBManager initialization: near "ON": syntax error
+[ERROR] 2021-08-16 18:55:26,108 - Exception at initializing Filter(): near "ON": syntax error
+[ERROR] 2021-08-16 18:55:26,109 - Unexpected Exception: near "ON": syntax error

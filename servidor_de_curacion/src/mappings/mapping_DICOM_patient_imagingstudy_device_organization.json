@@ -1,0 +1,653 @@
+{
+    "fileSourceList": [
+      {
+        "extension": "",
+        "label": "",
+        "path": "",
+        "sheets": [
+          {
+            "value": "Hoja1",
+            "label": "Hoja1",
+            "headers": [
+              {
+                "type": "Text",
+                "value": "filename"
+              },
+              {
+                "type": "Text",
+                "value": "(0020, 000d)",
+                "record": [
+                  {
+                    "recordId": "4",
+                    "target": [
+                      {
+                        "value": "ImagingStudy.identifier",
+                        "resource": "ImagingStudy",
+                        "type": "Identifier.value"
+                      },
+                      {
+                        "value": "ImagingStudy.id",
+                        "resource": "ImagingStudy"
+                      }
+                    ]
+                  }
+                ],
+                "conceptMap": {}
+              },
+              {
+                "type": "Text",
+                "value": "(0010, 0020)",
+                "record": [
+                  {
+                    "recordId": "4",
+                    "target": [
+                      {
+                        "value": "ImagingStudy.subject",
+                        "resource": "ImagingStudy",
+                        "type": "Reference.Patient"
+                      }
+                    ]
+                  },
+                  {
+                    "recordId": "0",
+                    "target": [
+                      {
+                        "value": "Patient.identifier",
+                        "resource": "Patient",
+                        "type": "Identifier.value"
+                      },
+                      {
+                        "value": "Patient.id",
+                        "resource": "Patient"
+                      }
+                    ]
+                  }
+                ],
+                "conceptMap": {}
+              },
+              {
+                "type": "Text",
+                "value": "(0018, 1000)",
+                "record": [
+                  {
+                    "recordId": "4",
+                    "target": [
+                      {
+                        "value": "ImagingStudy.series.performer.actor",
+                        "resource": "ImagingStudy",
+                        "type": "Reference.Device"
+                      }
+                    ]
+                  },
+                  {
+                    "recordId": "2",
+                    "target": [
+                      {
+                        "value": "Device.identifier",
+                        "resource": "Device",
+                        "type": "Identifier.value"
+                      },
+                      {
+                        "value": "Device.id",
+                        "resource": "Device"
+                      },
+                      {
+                        "value": "Device.serialNumber",
+                        "resource": "Device"
+                      }
+                    ]
+                  }
+                ],
+                "conceptMap": {}
+              },
+              {
+                "type": "Text",
+                "value": "(0008, 0080)",
+                "record": [
+                  {
+                    "recordId": "4",
+                    "target": [
+                      {
+                        "value": "ImagingStudy.series.performer.actor",
+                        "resource": "ImagingStudy",
+                        "type": "Reference.Organization"
+                      }
+                    ]
+                  },
+                  {
+                    "recordId": "3",
+                    "target": [
+                      {
+                        "value": "Organization.identifier",
+                        "resource": "Organization",
+                        "type": "Identifier.value"
+                      },
+                      {
+                        "value": "Organization.id",
+                        "resource": "Organization"
+                      },
+                      {
+                        "value": "Organization.name",
+                        "resource": "Organization"
+                      }
+                    ]
+                  }
+                ],
+                "conceptMap": {}
+              },
+              {
+                "type": "Text",
+                "value": "(0018, 1090)",
+                "record": [
+                  {
+                    "recordId": "2",
+                    "target": [
+                      {
+                        "value": "Device.modelNumber",
+                        "resource": "Device"
+                      }
+                    ]
+                  }
+                ],
+                "conceptMap": {}
+              },
+              {
+                "type": "Text",
+                "value": "(0008, 0070)",
+                "record": [
+                  {
+                    "recordId": "2",
+                    "target": [
+                      {
+                        "value": "Device.manufacturer",
+                        "resource": "Device"
+                      }
+                    ]
+                  }
+                ],
+                "conceptMap": {}
+              },
+              {
+                "type": "Text",
+                "value": "(0010, 0010)",
+                "record": [
+                  {
+                    "recordId": "0",
+                    "target": [
+                      {
+                        "value": "Patient.address",
+                        "resource": "Patient",
+                        "type": "Address.country"
+                      }
+                    ]
+                  }
+                ],
+                "conceptMap": {}
+              },
+              {
+                "type": "Date",
+                "value": "(0010, 0030)",
+                "record": [
+                  {
+                    "recordId": "0",
+                    "target": [
+                      {
+                        "value": "Patient.birthDate",
+                        "resource": "Patient"
+                      }
+                    ]
+                  }
+                ],
+                "conceptMap": {}
+              },
+              {
+                "type": "Text",
+                "value": "(0010, 0040)",
+                "record": [
+                  {
+                    "recordId": "0",
+                    "target": [
+                      {
+                        "value": "Patient.gender",
+                        "resource": "Patient"
+                      }
+                    ]
+                  }
+                ],
+                "conceptMap": {}
+              },
+              {
+                "type": "Text",
+                "value": "(0008, 0061)",
+                "record": [
+                  {
+                    "recordId": "4",
+                    "target": [
+                      {
+                        "value": "ImagingStudy.modality",
+                        "resource": "ImagingStudy",
+                        "type": "Coding.code",
+                        "fixedUri": "http://dicom.nema.org/resources/ontology/DCM"
+                      }
+                    ]
+                  }
+                ],
+                "conceptMap": {}
+              },
+              {
+                "type": "Date",
+                "value": "(0008, 0030)",
+                "record": [
+                  {
+                    "recordId": "4",
+                    "target": [
+                      {
+                        "value": "ImagingStudy.started",
+                        "resource": "ImagingStudy"
+                      }
+                    ]
+                  }
+                ],
+                "conceptMap": {}
+              },
+              {
+                "type": "Text",
+                "value": "(0020, 1206)",
+                "record": [
+                  {
+                    "recordId": "4",
+                    "target": [
+                      {
+                        "value": "ImagingStudy.numberOfSeries",
+                        "resource": "ImagingStudy"
+                      }
+                    ]
+                  }
+                ],
+                "conceptMap": {}
+              },
+              {
+                "type": "Text",
+                "value": "(0020, 1208)",
+                "record": [
+                  {
+                    "recordId": "4",
+                    "target": [
+                      {
+                        "value": "ImagingStudy.numberOfInstances",
+                        "resource": "ImagingStudy"
+                      }
+                    ]
+                  }
+                ],
+                "conceptMap": {}
+              },
+              {
+                "type": "Text",
+                "value": "(0008, 1032)",
+                "record": [
+                  {
+                    "recordId": "4",
+                    "target": [
+                      {
+                        "value": "ImagingStudy.procedureCode",
+                        "resource": "ImagingStudy",
+                        "type": "CodeableConcept.coding"
+                      }
+                    ]
+                  }
+                ],
+                "conceptMap": {}
+              },
+              {
+                "type": "Text",
+                "value": "(0040, 1002)",
+                "record": [
+                  {
+                    "recordId": "4",
+                    "target": [
+                      {
+                        "value": "ImagingStudy.reasonCode",
+                        "resource": "ImagingStudy",
+                        "type": "CodeableConcept.coding"
+                      }
+                    ]
+                  }
+                ],
+                "conceptMap": {}
+              },
+              {
+                "type": "Text",
+                "value": "(0008, 1030)",
+                "record": [
+                  {
+                    "recordId": "4",
+                    "target": [
+                      {
+                        "value": "ImagingStudy.description",
+                        "resource": "ImagingStudy"
+                      }
+                    ]
+                  }
+                ],
+                "conceptMap": {}
+              },
+              {
+                "type": "Text",
+                "value": "(0020, 000e)",
+                "record": [
+                  {
+                    "recordId": "4",
+                    "target": [
+                      {
+                        "value": "ImagingStudy.series.uid",
+                        "resource": "ImagingStudy"
+                      }
+                    ]
+                  }
+                ],
+                "conceptMap": {}
+              },
+              {
+                "type": "Text",
+                "value": "(0020, 0011)",
+                "record": [
+                  {
+                    "recordId": "4",
+                    "target": [
+                      {
+                        "value": "ImagingStudy.series.number",
+                        "resource": "ImagingStudy"
+                      }
+                    ]
+                  }
+                ],
+                "conceptMap": {}
+              },
+              {
+                "type": "Text",
+                "value": "(0008, 0060)",
+                "record": [
+                  {
+                    "recordId": "4",
+                    "target": [
+                      {
+                        "value": "ImagingStudy.series.modality",
+                        "resource": "ImagingStudy",
+                        "type": "Coding.code",
+                        "fixedUri": "http://dicom.nema.org/resources/ontology/DCM"
+                      }
+                    ]
+                  }
+                ],
+                "conceptMap": {}
+              },
+              {
+                "type": "Text",
+                "value": "(0008, 103e)",
+                "record": [
+                  {
+                    "recordId": "4",
+                    "target": [
+                      {
+                        "value": "ImagingStudy.series.description",
+                        "resource": "ImagingStudy"
+                      }
+                    ]
+                  }
+                ],
+                "conceptMap": {}
+              },
+              {
+                "type": "Text",
+                "value": "(0020, 1209)",
+                "record": [
+                  {
+                    "recordId": "4",
+                    "target": [
+                      {
+                        "value": "ImagingStudy.series.numberOfInstances",
+                        "resource": "ImagingStudy"
+                      }
+                    ]
+                  }
+                ],
+                "conceptMap": {}
+              },
+              {
+                "type": "Text",
+                "value": "(0018, 0015)",
+                "record": [
+                  {
+                    "recordId": "4",
+                    "target": [
+                      {
+                        "value": "ImagingStudy.series.bodySite",
+                        "resource": "ImagingStudy",
+                        "type": "Coding.code",
+                        "fixedUri": "http://snomed.info/sct"
+                      }
+                    ]
+                  }
+                ],
+                "conceptMap": {
+                  "source": "http://snomed.info/sct"
+                }
+              },
+              {
+                "type": "Text",
+                "value": "(0020, 0060)",
+                "record": [
+                  {
+                    "recordId": "4",
+                    "target": [
+                      {
+                        "value": "ImagingStudy.series.laterality",
+                        "resource": "ImagingStudy",
+                        "type": "Coding.code",
+                        "fixedUri": "http://snomed.info/sct"
+                      }
+                    ]
+                  }
+                ],
+                "conceptMap": {
+                  "source": "http://snomed.info/sct",
+                  "target": "http://snomed.info/sct?fhir_vs=refset/32570061000036105"
+                }
+              },
+              {
+                "type": "Date",
+                "value": "(0008, 0021)",
+                "record": [
+                  {
+                    "recordId": "4",
+                    "target": [
+                      {
+                        "value": "ImagingStudy.series.started",
+                        "resource": "ImagingStudy"
+                      }
+                    ]
+                  }
+                ],
+                "conceptMap": {}
+              },
+              {
+                "type": "Text",
+                "value": "(0008, 0018)",
+                "record": [
+                  {
+                    "recordId": "4",
+                    "target": [
+                      {
+                        "value": "ImagingStudy.series.instance.uid",
+                        "resource": "ImagingStudy"
+                      }
+                    ]
+                  }
+                ],
+                "conceptMap": {}
+              },
+              {
+                "type": "Text",
+                "value": "(0008, 0016)",
+                "record": [
+                  {
+                    "recordId": "4",
+                    "target": [
+                      {
+                        "value": "ImagingStudy.series.instance.sopClass",
+                        "resource": "ImagingStudy",
+                        "type": "Coding.code",
+                        "fixedUri": "urn:ietf:rfc:3986"
+                      }
+                    ]
+                  }
+                ],
+                "conceptMap": {}
+              },
+              {
+                "type": "Text",
+                "value": "(0020, 0013)",
+                "record": [
+                  {
+                    "recordId": "4",
+                    "target": [
+                      {
+                        "value": "ImagingStudy.series.instance.number",
+                        "resource": "ImagingStudy"
+                      }
+                    ]
+                  }
+                ],
+                "conceptMap": {}
+              },
+              {
+                "type": "Text",
+                "value": "(0008, 0008)",
+                "record": [
+                  {
+                    "recordId": "4",
+                    "target": [
+                      {
+                        "value": "ImagingStudy.series.instance.title",
+                        "resource": "ImagingStudy"
+                      }
+                    ]
+                  }
+                ],
+                "conceptMap": {}
+              },
+              {
+                "record": [
+                  {
+                    "recordId": "0",
+                    "target": [
+                      {
+                        "value": "Patient.identifier",
+                        "resource": "Patient",
+                        "type": "Identifier.system"
+                      }
+                    ]
+                  }
+                ],
+                "conceptMap": {},
+                "defaultValue": "http://fhir.alpacs.cl/patient"
+              },
+              {
+                "record": [
+                  {
+                    "recordId": "0",
+                    "target": [
+                      {
+                        "value": "Patient.meta",
+                        "resource": "Patient",
+                        "type": "Meta.security",
+                        "fixedUri": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality"
+                      }
+                    ]
+                  }
+                ],
+                "conceptMap": {},
+                "defaultValue": "R"
+              },
+              {
+                "record": [
+                  {
+                    "recordId": "4",
+                    "target": [
+                      {
+                        "value": "ImagingStudy.status",
+                        "resource": "ImagingStudy"
+                      }
+                    ]
+                  }
+                ],
+                "conceptMap": {},
+                "defaultValue": "available"
+              },
+              {
+                "record": [
+                  {
+                    "recordId": "4",
+                    "target": [
+                      {
+                        "value": "ImagingStudy.identifier",
+                        "resource": "ImagingStudy",
+                        "type": "Identifier.system"
+                      }
+                    ]
+                  }
+                ],
+                "conceptMap": {},
+                "defaultValue": "urn:dicom:uid"
+              },
+              {
+                "record": [
+                  {
+                    "recordId": "4",
+                    "target": [
+                      {
+                        "value": "ImagingStudy.series.performer.function.Device",
+                        "resource": "ImagingStudy",
+                        "type": "CodeableConcept.coding",
+                        "fixedUri": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType"
+                      }
+                    ]
+                  }
+                ],
+                "conceptMap": {},
+                "defaultValue": "DEV"
+              },
+              {
+                "record": [
+                  {
+                    "recordId": "4",
+                    "target": [
+                      {
+                        "value": "ImagingStudy.series.performer.function.Organization",
+                        "resource": "ImagingStudy",
+                        "type": "CodeableConcept.coding",
+                        "fixedUri": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType"
+                      }
+                    ]
+                  }
+                ],
+                "conceptMap": {},
+                "defaultValue": "PRF"
+              }
+            ]
+          },
+          {
+            "value": "Hoja2",
+            "label": "Hoja2"
+          },
+          {
+            "value": "Hoja3",
+            "label": "Hoja3"
+          }
+        ],
+        "currentSheet": null
+      }
+    ]
+  }
+  

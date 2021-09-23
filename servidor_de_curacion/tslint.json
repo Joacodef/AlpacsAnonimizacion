@@ -1,0 +1,32 @@
+{
+    "defaultSeverity": "error",
+    "extends": [
+        "tslint:recommended"
+    ],
+    "linterOptions": {
+        "exclude": [
+            "node_modules/**"
+        ]
+    },
+    "jsRules": {},
+    "rules": {
+        "trailing-comma": [ false ],
+        "no-empty": false,
+        "no-console": false,
+        "max-classes-per-file": ["error", 100],
+        "variable-name": {
+            "options": [
+              "ban-keywords",
+              "check-format",
+              "allow-pascal-case",
+              "allow-leading-underscore",
+              "allow-snake-case",
+              "allow-trailing-underscore",
+              "require-const-for-all-caps"
+            ]
+        },
+        "no-shadowed-variable": false,
+        "no-var-requires": false
+    },
+    "rulesDirectory": []
+}

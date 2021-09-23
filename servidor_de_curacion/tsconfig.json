@@ -1,0 +1,47 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "esModuleInterop": true,
+        "target": "es2017",
+        "noImplicitAny": false,
+        "moduleResolution": "node",
+        "sourceMap": true,
+        "outDir": "dist",
+        "baseUrl": ".",
+        "types": [
+            "body-parser",
+            "connect",
+            "crypto-js",
+            "lodash",
+            "mime",
+            "express",
+            "express-serve-static-core",
+            "node",
+            "qs",
+            "range-parser",
+            "serve-static"
+        ],
+        "typeRoots": [
+          "./node_modules/@types", "./src/typings"
+        ],
+        "paths": {
+            "*": [
+                "src/typings/*",
+                "node_modules/*"
+            ]
+        },
+        "lib": [
+            "DOM",
+            "ES5",
+            "ES6",
+            "ESNext",
+            "es2015.collection"
+        ]
+    },
+    "include": [
+        "src/**/*"
+    ],
+    "exclude": [
+        "node_modules"
+    ]
+}

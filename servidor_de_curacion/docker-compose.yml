@@ -1,0 +1,12 @@
+version: '3'
+services:
+  node:
+    container_name: Servidor_de_curacion
+    build:
+      context: .
+    command: npm run start
+    network_mode: host
+    #ports:
+      # <NERWORK>:<EXPOSED PORT>:<CONTAINER PORT>
+     # - "8484:8484" # <CONTAINER PORT> should be the same as in config.prod.ini [FLASK] port
+    restart: on-failure

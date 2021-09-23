@@ -1,0 +1,9 @@
+[ERROR] 2021-08-16 18:49:56,161 - OS error: [Errno 2] No such file or directory: '/secret/secret.key'
+[ERROR] 2021-08-16 18:49:56,162 - Secret key not found.
+[ERROR] 2021-08-16 18:49:56,162 - OS error: [Errno 2] No such file or directory: '/secret/secret.key\\secret.key'
+[ERROR] 2021-08-16 18:50:49,610 - Unexpected exception at read_files(): [WinError 3] El sistema no puede encontrar la ruta especificada: '/health/inbound/'
+[ERROR] 2021-08-16 18:50:49,615 - None
+[ERROR] 2021-08-16 18:50:49,615 - Watcher stopped: [WinError 3] El sistema no puede encontrar la ruta especificada: '/health/inbound/'
+[ERROR] 2021-08-16 18:55:26,108 - Unexpected exception at DBManager initialization: near "ON": syntax error
+[ERROR] 2021-08-16 18:55:26,108 - Exception at initializing Filter(): near "ON": syntax error
+[ERROR] 2021-08-16 18:55:26,109 - Unexpected Exception: near "ON": syntax error

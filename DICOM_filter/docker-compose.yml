@@ -1,0 +1,25 @@
+version: '3'
+services:
+  python:
+    container_name: DICOMFilter
+    build:
+      context: .
+    command: python dicom_extractor.py
+    volumes:
+      # <LOCAL FOLDER/NETWORK FILESYSTEM FOLDER>:<CONTAINER FOLDER>
+      # Health folders
+      - ../HEALTH/CURATED:/health/curated # <CONTAINER FOLDER> should be the same as in config.prod.ini [ARCHIVE] health_curated_path
+      - ../HEALTH/INBOUND:/health/inbound # <CONTAINER FOLDER> should be the same as in config.prod.ini [ARCHIVE] health_inbound_path
+      - ../HEALTH/PROCESSED:/health/processed # <CONTAINER FOLDER> should be the same as in config.prod.ini [ARCHIVE] health_processed_path
+      - ../HEALTH/STASHED:/health/stashed # <CONTAINER FOLDER> should be the same as in config.prod.ini [ARCHIVE] health_stashed_path
+      # Secret folder
+      - ../SECRET:/secret # <CONTAINER FOLDER> should be the same as in config.prod.ini [CONFIG] secret_path
+      # Log folder
+      - ../LOG:/log # <CONTAINER FOLDER> should be the same as in config.prod.ini [LOG] path
+    network_mode: host
+    #ports:
+      # <EXPOSED PORT>:<CONTAINER PORT>
+     # - "5000:5000" # FLASK | <CONTAINER PORT> should be the same as in config.prod.ini [FLASK] port
+    restart: on-failure
+    env_file:
+      - .env

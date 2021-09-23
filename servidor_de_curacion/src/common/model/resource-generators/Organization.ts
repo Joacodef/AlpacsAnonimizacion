@@ -1,0 +1,230 @@
+import { DataTypeFactory } from './../factory/data-type-factory'
+import { FHIRUtil } from './../../utils/fhir-util'
+import { Generator } from './Generator'
+import { Logger } from "tslog";
+
+const log: Logger = new Logger();
+
+export class Organization implements Generator {
+
+  Organization () {}
+
+  public generateResource (resource: Map<string, BufferResource>, profile: string | undefined): Promise<fhir.Organization> {
+    const organization: fhir.Organization = { resourceType: 'Organization' } as fhir.Organization
+
+    return new Promise<fhir.Organization>((resolve, reject) => {
+
+      const keys: string[] = Array.from(resource.keys())
+
+      if (resource.has('Organization.id')) {
+        organization.id = String(resource.get('Organization.id')?.value || '')
+      }
+
+      const _meta = keys.filter(_ => _.startsWith('Organization.meta'))
+      if (_meta.length) {
+        const meta: fhir.Meta = {}
+        if (resource.has('Organization.meta.Meta.versionId')) {
+          meta.versionId = String(resource.get('Organization.meta.Meta.versionId')?.value || '')
+        }
+        if (resource.has('Organization.meta.Meta.source')) {
+          meta.source = String(resource.get('Organization.meta.Meta.source')?.value || '')
+        }
+        if (resource.has('Organization.meta.Meta.profile')) {
+          meta.profile = [String(resource.get('Organization.meta.Meta.profile')?.value || '')]
+        }
+        if (resource.has('Organization.meta.Meta.security')) {
+          const item = resource.get('Organization.meta.Meta.security')
+          meta.security = [DataTypeFactory.createCoding({system: item.fixedUri, code: String(item.value)})]
+        }
+        if (resource.has('Organization.meta.Meta.tag')) {
+          const item = resource.get('Organization.meta.Meta.tag')
+          meta.tag = [DataTypeFactory.createCoding({system: item.fixedUri, code: String(item.value)})]
+        }
+        organization.meta = {...organization.meta, ...meta}
+      }
+
+      // TODO: manage array
+      const organizationIdentifier = keys.filter(_ => _.startsWith('Organization.identifier'))
+      if (organizationIdentifier.length) {
+        const identifier: fhir.Identifier = {}
+        if (resource.has('Organization.identifier.Identifier.system')) {
+          identifier.system = String(resource.get('Organization.identifier.Identifier.system')?.value || '')
+        }
+        if (resource.has('Organization.identifier.Identifier.value')) {
+          identifier.value = String(resource.get('Organization.identifier.Identifier.value')?.value || '')
+        }
+
+        organization.identifier = [identifier]
+      }
+
+      if (resource.has('Organization.active')) {
+        const item = resource.get('Organization.active')
+        organization.active = String(item.value).toLowerCase() === 'true'
+      }
+
+      // TODO: manage array
+      if (resource.has('Organization.type')) {
+        const item = resource.get('Organization.type')
+        organization.type = [DataTypeFactory.createCodeableConcept({system: item.fixedUri, code: String(item.value)})]
+      }
+
+      if (resource.has('Organization.name')) {
+        organization.name = String(resource.get('Organization.name').value)
+      }
+
+      if (resource.has('Organization.alias')) {
+        organization.alias = [String(resource.get('Organization.alias').value)]
+      }
+
+      // TODO: manage array
+      const organizationTelecom = keys.filter(_ => _.startsWith('Organization.telecom'))
+      if (organizationTelecom.length) {
+        // TODO: ContactPoint.period
+        const telecom: fhir.ContactPoint = {}
+        if (resource.has('Organization.telecom.ContactPoint.system')) {
+          const item = resource.get('Organization.telecom.ContactPoint.system')
+          telecom.system = String(item.value)
+        }
+        if (resource.has('Organization.telecom.ContactPoint.value')) {
+          telecom.value = String(resource.get('Organization.telecom.ContactPoint.value').value)
+        }
+        if (resource.has('Organization.telecom.ContactPoint.use')) {
+          const item = resource.get('Organization.telecom.ContactPoint.use')
+          telecom.use = String(item.value)
+        }
+        if (resource.has('Organization.telecom.ContactPoint.rank')) {
+          telecom.rank = Number(resource.get('Organization.telecom.ContactPoint.rank').value)
+        }
+
+        const _telecom = DataTypeFactory.createContactPoint(telecom).toJSON()
+        if (!FHIRUtil.isEmpty(_telecom)) {
+          if (organization.telecom?.length) organization.telecom.push(_telecom)
+          else organization.telecom = [_telecom]
+        }
+      }
+
+      const organizationAddress = keys.filter(_ => _.startsWith('Organization.address'))
+      if (organizationAddress.length) {
+        const address: fhir.Address = {}
+        if (resource.has('Organization.address.Address.type')) { address.type = String(resource.get('Organization.address.Address.type').value) }
+        if (resource.has('Organization.address.Address.text')) { address.text = String(resource.get('Organization.address.Address.text').value) }
+        if (resource.has('Organization.address.Address.line')) { address.line = [String(resource.get('Organization.address.Address.line').value)] }
+        if (resource.has('Organization.address.Address.city')) { address.city = String(resource.get('Organization.address.Address.city').value) }
+        if (resource.has('Organization.address.Address.district')) { address.district = String(resource.get('Organization.address.Address.district').value) }
+        if (resource.has('Organization.address.Address.state')) { address.state = String(resource.get('Organization.address.Address.state').value) }
+        if (resource.has('Organization.address.Address.postalCode')) { address.postalCode = String(resource.get('Organization.address.Address.postalCode').value) }
+        if (resource.has('Organization.address.Address.country')) { address.country = String(resource.get('Organization.address.Address.country').value) }
+
+        const _address = DataTypeFactory.createAddress(address).toJSON()
+        if (!FHIRUtil.isEmpty(_address)) {
+          if (organization.address?.length) organization.address.push(_address)
+          else organization.address = [_address]
+        }
+      }
+
+      const partOf = FHIRUtil.searchForReference(keys, resource, 'Organization.partOf.Reference.')
+      if (partOf) organization.partOf = partOf
+
+      // TODO: manage array
+      const organizationContact = keys.filter(_ => _.startsWith('Organization.contact'))
+      if (organizationContact.length) {
+        const contact: fhir.OrganizationContact = {} as fhir.OrganizationContact
+        if (resource.has('Organization.contact.purpose')) {
+          const item = resource.get('Organization.contact.purpose')
+          contact.purpose = DataTypeFactory.createCodeableConcept(
+            DataTypeFactory.createCoding({system: item.fixedUri, code: String(item.value)})
+          )
+        }
+
+        if (resource.has('Organization.contact.name')) {
+          const contactName = keys.filter(_ => _.startsWith('Organization.contact.name'))
+          if (contactName.length) {
+            // TODO: HumanName.period
+            const name: fhir.HumanName = {}
+            if (resource.has('Organization.contact.name.HumanName.use')) {
+              const item = resource.get('Organization.contact.name.HumanName.use')
+              name.use = String(item.value)
+            }
+            if (resource.has('Organization.contact.name.HumanName.text')) { name.text = String(resource.get('Organization.contact.name.HumanName.text').value) }
+            if (resource.has('Organization.contact.name.HumanName.family')) { name.family = String(resource.get('Organization.contact.name.HumanName.family').value) }
+            if (resource.has('Organization.contact.name.HumanName.given')) { name.given = [String(resource.get('Organization.contact.name.HumanName.given').value)] }
+            if (resource.has('Organization.contact.name.HumanName.prefix')) { name.prefix = [String(resource.get('Organization.contact.name.HumanName.prefix').value)] }
+            if (resource.has('Organization.contact.name.HumanName.suffix')) { name.suffix = [String(resource.get('Organization.contact.name.HumanName.suffix').value)] }
+
+            const _name = DataTypeFactory.createHumanName(name).toJSON()
+            contact.name = _name
+          }
+        }
+        const contactTelecom = keys.filter(_ => _.startsWith('Organization.contact.telecom'))
+        if (contactTelecom.length) {
+          // TODO: ContactPoint.period
+          const telecom: fhir.ContactPoint = {}
+          if (resource.has('Organization.contact.telecom.ContactPoint.system')) {
+            const item = resource.get('Organization.contact.telecom.ContactPoint.system')
+            telecom.system = String(item.value)
+          }
+          if (resource.has('Organization.contact.telecom.ContactPoint.value')) {
+            telecom.value = String(resource.get('Organization.contact.telecom.ContactPoint.value').value)
+          }
+          if (resource.has('Organization.contact.telecom.ContactPoint.use')) {
+            const item = resource.get('Organization.contact.telecom.ContactPoint.use')
+            telecom.use = String(item.value)
+          }
+          if (resource.has('Organization.contact.telecom.ContactPoint.rank')) {
+            telecom.rank = Number(resource.get('Organization.contact.telecom.ContactPoint.rank').value)
+          }
+
+          const _telecom = DataTypeFactory.createContactPoint(telecom).toJSON()
+          if (!FHIRUtil.isEmpty(_telecom)) {
+            if (contact.telecom?.length) contact.telecom.push(_telecom)
+            else contact.telecom = [_telecom]
+          }
+        }
+
+        const contactAddress = keys.filter(_ => _.startsWith('Organization.contact.address'))
+        if (contactAddress.length) {
+          const address: fhir.Address = {}
+          if (resource.has('Organization.contact.address.Address.type')) { address.type = String(resource.get('Organization.contact.address.Address.type').value) }
+          if (resource.has('Organization.contact.address.Address.text')) { address.text = String(resource.get('Organization.contact.address.Address.text').value) }
+          if (resource.has('Organization.contact.address.Address.line')) { address.line = [String(resource.get('Organization.contact.address.Address.line').value)] }
+          if (resource.has('Organization.contact.address.Address.city')) { address.city = String(resource.get('Organization.contact.address.Address.city').value) }
+          if (resource.has('Organization.contact.address.Address.district')) { address.district = String(resource.get('Organization.contact.address.Address.district').value) }
+          if (resource.has('Organization.contact.address.Address.state')) { address.state = String(resource.get('Organization.contact.address.Address.state').value) }
+          if (resource.has('Organization.contact.address.Address.postalCode')) { address.postalCode = String(resource.get('Organization.contact.address.Address.postalCode').value) }
+          if (resource.has('Organization.contact.address.Address.country')) { address.country = String(resource.get('Organization.contact.address.Address.country').value) }
+
+          const _address = DataTypeFactory.createAddress(address).toJSON()
+          contact.address = _address
+        }
+
+        const _contact = FHIRUtil.cleanJSON(contact)
+        if (!FHIRUtil.isEmpty(_contact)) {
+          organization.contact = [_contact]
+        }
+      }
+
+      // TODO: manage array
+      const endpoint = FHIRUtil.searchForReference(keys, resource, 'Organization.endpoint.Reference.')
+      if (endpoint) organization.endpoint = [endpoint]
+
+      organization.id = this.generateID(organization)
+
+      if (organization.id) {
+        resolve(organization)
+      }
+      else {
+        log.error('Id field is empty')
+        reject('Id field is empty')
+      }
+    })
+  }
+
+  public generateID (resource: fhir.Organization): string {
+    let value: string = ''
+
+    if (resource.id) value += resource.id
+
+    return FHIRUtil.hash(value)
+  }
+
+}
