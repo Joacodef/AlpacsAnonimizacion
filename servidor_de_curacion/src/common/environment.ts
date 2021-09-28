@@ -1,6 +1,6 @@
 // FHIR Server
-const fhir_url_source = 'http://0.0.0.0:8080/fhir'
-const fhir_url_target = 'http://0.0.0.0:8080/fhir'
+const fhir_url_source = 'http://128.0.8.201:8080/fhir'
+const fhir_url_target = 'http://128.0.8.201:8080/fhir'
 const hl7Base = 'http://hl7.org/fhir'
 // Terminology Server
 // Reference: https://ontoserver.csiro.au/docs/6/api-fhir-conceptmap.html

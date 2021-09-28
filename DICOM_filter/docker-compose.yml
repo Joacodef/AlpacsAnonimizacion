@@ -8,10 +8,10 @@ services:
     volumes:
       # <LOCAL FOLDER/NETWORK FILESYSTEM FOLDER>:<CONTAINER FOLDER>
       # Health folders
-      - ../HEALTH/CURATED:/health/curated # <CONTAINER FOLDER> should be the same as in config.prod.ini [ARCHIVE] health_curated_path
-      - ../HEALTH/INBOUND:/health/inbound # <CONTAINER FOLDER> should be the same as in config.prod.ini [ARCHIVE] health_inbound_path
-      - ../HEALTH/PROCESSED:/health/processed # <CONTAINER FOLDER> should be the same as in config.prod.ini [ARCHIVE] health_processed_path
-      - ../HEALTH/STASHED:/health/stashed # <CONTAINER FOLDER> should be the same as in config.prod.ini [ARCHIVE] health_stashed_path
+      - ../../../../alpacs_data/curated:/health/curated # <CONTAINER FOLDER> should be the same as in config.prod.ini [ARCHIVE] health_curated_path
+      - ../../../../alpacs_data/inbound:/health/inbound # <CONTAINER FOLDER> should be the same as in config.prod.ini [ARCHIVE] health_inbound_path
+      - ../../../../alpacs_data/processed:/health/processed # <CONTAINER FOLDER> should be the same as in config.prod.ini [ARCHIVE] health_processed_path
+      - ../../../../alpacs_data/stashed:/health/stashed # <CONTAINER FOLDER> should be the same as in config.prod.ini [ARCHIVE] health_stashed_path
       # Secret folder
       - ../SECRET:/secret # <CONTAINER FOLDER> should be the same as in config.prod.ini [CONFIG] secret_path
       # Log folder

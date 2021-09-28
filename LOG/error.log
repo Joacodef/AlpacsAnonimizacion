@@ -2593,3 +2593,26 @@ sqlite3.OperationalError: ON CONFLICT clause does not match any PRIMARY KEY or U
 [ERROR] 2021-08-21 00:26:44,077 - Error at post_data function: <urlopen error [Errno 111] Connection refused>
 [ERROR] 2021-08-21 00:26:47,093 - Error at post_data function: <urlopen error [Errno 111] Connection refused>
 [ERROR] 2021-08-21 00:26:50,040 - Error at post_data function: <urlopen error [Errno 111] Connection refused>
+[ERROR] 2021-09-24 01:17:07,333 - Unexpected exception at read_files(): [Errno 2] No such file or directory: '/alpacs_data/inbound/'
+[ERROR] 2021-09-24 01:17:07,334 - None
+[ERROR] 2021-09-24 01:17:07,334 - Watcher stopped: [Errno 2] No such file or directory: '/alpacs_data/inbound/'
+[ERROR] 2021-09-27 16:34:47,654 - Unexpected exception at read_files(): [Errno 2] No such file or directory: '/alpacs_data/inbound/'
+[ERROR] 2021-09-27 16:34:47,667 - None
+[ERROR] 2021-09-27 16:34:47,667 - Watcher stopped: [Errno 2] No such file or directory: '/alpacs_data/inbound/'
+[ERROR] 2021-09-27 17:34:48,243 - Unexpected exception at read_files(): [Errno 2] No such file or directory: '/alpacs_data/inbound/'
+[ERROR] 2021-09-27 17:34:48,245 - None
+[ERROR] 2021-09-27 17:34:48,245 - Watcher stopped: [Errno 2] No such file or directory: '/alpacs_data/inbound/'
+[ERROR] 2021-09-27 17:43:54,421 - Unexpected exception at read_files(): [Errno 2] No such file or directory: '/alpacs_data/inbound/'
+[ERROR] 2021-09-27 17:43:54,422 - None
+[ERROR] 2021-09-27 17:43:54,422 - Watcher stopped: [Errno 2] No such file or directory: '/alpacs_data/inbound/'
+[ERROR] 2021-09-27 17:47:02,893 - Unexpected exception at read_files(): [Errno 2] No such file or directory: '/alpacs_data/inbound/'
+[ERROR] 2021-09-27 17:47:02,894 - None
+[ERROR] 2021-09-27 17:47:02,894 - Watcher stopped: [Errno 2] No such file or directory: '/alpacs_data/inbound/'
+[ERROR] 2021-09-27 18:03:35,456 - Unexpected exception at read_files(): [Errno 2] No such file or directory: '/alpacs_data/inbound/'
+[ERROR] 2021-09-27 18:03:35,457 - None
+[ERROR] 2021-09-27 18:03:35,457 - Watcher stopped: [Errno 2] No such file or directory: '/alpacs_data/inbound/'
+[ERROR] 2021-09-27 18:17:32,688 - Error at post_data function: <urlopen error [Errno 111] Connection refused>
+[ERROR] 2021-09-28 15:54:39,060 - Unexpected exception reading a file in read_files(): local variable 'result' referenced before assignment
+[ERROR] 2021-09-28 15:54:39,076 - Unexpected exception at read_files(): local variable 'result' referenced before assignment
+[ERROR] 2021-09-28 15:54:39,096 - None
+[ERROR] 2021-09-28 15:54:39,107 - Watcher stopped: local variable 'result' referenced before assignment
