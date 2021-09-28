@@ -41,3 +41,4 @@ Detalles de ejecucion en cada subcarpeta
 4. (Para DICOM) Ingresar archivos DICOM a la carpeta "health/inbound"
 
 5. (Para metadata) Ingresar datos por POST Request con Body raw JSON (JSON con datos de prueba en "mapping_DICOM_patient_imagingstudy_device_organization.json") a API "/generate" del servidor de curación.
+.
